@@ -27,7 +27,7 @@ swap-cli info
 swap-cli take --help
 ```
 
-Or check your browser at [localhost:3000](http://localhost:3000)!
+Or check your browser at [localhost:3000](http://localhost:3000)! (You need to activate grpc in your node config)
 
 You are ready to take a deal!
 
