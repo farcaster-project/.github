@@ -11,12 +11,13 @@ If you have Rust and Docker installed on your machine you can run
 
 ```
 cargo install farcaster_node
-docker run --rm -d -p 38083 ghcr.io/farcaster-project/containers/monero-wallet-rpc:latest\
+docker run --rm -d -p 38083:38083 ghcr.io/farcaster-project/containers/monero-wallet-rpc:latest\
     /usr/bin/monero-wallet-rpc --stagenet\
     --disable-rpc-login --wallet-dir wallets\
     --daemon-host stagenet.community.rino.io:38081\
     --rpc-bind-ip 0.0.0.0 --rpc-bind-port 38083\
     --confirm-external-bind
+docker run --rm -d -p 3000:3000 ghcr.io/farcaster-project/faracster-gui/app:latest
 farcasterd
 ```
 
@@ -25,6 +26,9 @@ In a new terminal run
 swap-cli info
 swap-cli take --help
 ```
+
+Or check your browser at [localhost:3000](http://localhost:3000)!
+
 You are ready to take a deal!
 
 ### More resources
