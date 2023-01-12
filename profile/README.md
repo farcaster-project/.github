@@ -28,7 +28,7 @@ swap-cli info
 swap-cli take --help
 ```
 
-Or check your browser at [ui.farcaster.dev](https://ui.farcaster.dev)! (You need to activate grpc in your node config)
+Or check your browser at [ui.farcaster.dev](https://ui.farcaster.dev) (First you need to activate grpc in your node config)
 
 You are ready to take a deal!
 
