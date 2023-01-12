@@ -9,25 +9,26 @@ Have a look at the [Node wiki](https://github.com/farcaster-project/farcaster-no
 
 If you have Rust and Docker installed on your machine you can run
 
-```
-cargo install farcaster_node
+```bash
+# run a temporary Monero wallet RPC
 docker run --rm -d -p 38083:38083 ghcr.io/farcaster-project/containers/monero-wallet-rpc:latest\
     /usr/bin/monero-wallet-rpc --stagenet\
     --disable-rpc-login --wallet-dir wallets\
     --daemon-host stagenet.community.rino.io:38081\
     --rpc-bind-ip 0.0.0.0 --rpc-bind-port 38083\
     --confirm-external-bind
-docker run --rm -d -p 3000:3000 ghcr.io/farcaster-project/faracster-gui/app:latest
+# install and launch your node
+cargo install farcaster_node
 farcasterd
 ```
 
-In a new terminal run
+In a new terminal you can now interact with your node through the cli with
 ```
 swap-cli info
 swap-cli take --help
 ```
 
-Or check your browser at [localhost:3000](http://localhost:3000)! (You need to activate grpc in your node config)
+Or check your browser at [ui.farcaster.dev](https://ui.farcaster.dev)! (You need to activate grpc in your node config)
 
 You are ready to take a deal!
 
